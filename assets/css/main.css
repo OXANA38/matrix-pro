@@ -3784,28 +3784,5 @@ input, select, textarea {
 			}
 
 		}
-/* Custom Brightness Fix */
-#wrapper > header p, 
-#main .content p, 
-#main .special p {
-    color: #ffffff !important; /* Делаем обычный текст чисто белым */
-    opacity: 1 !important;
-    font-weight: 400;
-}
 
-h1, h2, h3, h4, h5, h6 {
-    color: #ffffff !important; /* Делаем заголовки ярко-белыми */
-    font-weight: 800 !important; /* Делаем их жирнее */
-    letter-spacing: 1px;
-}
 
-#nav ul li a {
-    color: #ffffff !important; /* Меню тоже должно быть видно */
-    font-weight: 600;
-}
-
-.button.primary {
-    background-color: #00ffcc !important; /* Яркая кнопка (бирюзовый неон) */
-    color: #000000 !important; /* Черный текст на кнопке для контраста */
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
-}
