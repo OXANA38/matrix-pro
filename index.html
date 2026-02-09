@@ -160,6 +160,24 @@ body b, body strong,
     text-shadow: none !important;
     font-weight: 700 !important;
 }
+
+			/* ИСПРАВЛЕНИЕ ДЛЯ ПРОБЛЕМНОГО БЕЛОГО БЛОКА В "МАТЕМАТИКА ДЛЯ ЛИДЕРА" */
+#second [style*="background: rgba(255"] b, 
+#second [style*="background: rgba(255"] strong,
+#second [style*="background-color: rgba(255"] b,
+#second [style*="background-color: rgba(255"] strong,
+#second [style*="rgba(255, 255"] b,
+#second [style*="rgba(255, 255"] strong {
+    color: #006633 !important;
+    text-shadow: none !important;
+    font-weight: 700 !important;
+}
+
+/* ДОПОЛНИТЕЛЬНОЕ ПРАВИЛО для более надежного перехвата ВСЕХ белых блоков */
+#second div:not(#header):not(#nav):not(#footer):not(.spotlight) b,
+#second div:not(#header):not(#nav):not(#footer):not(.spotlight) strong {
+    color: #006633 !important;
+}
 </style>
 	</head>
 	<body class="is-preload">
@@ -391,6 +409,7 @@ body b, body strong,
 
 	</body>
 </html>
+
 
 
 
