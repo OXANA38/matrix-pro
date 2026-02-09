@@ -3784,6 +3784,37 @@ input, select, textarea {
 			}
 
 		}
+/* ИСПРАВЛЕНИЕ: ЯРКИЙ ТЕКСТ БЕЗ ПОТЕРИ ФОНА */
+
+/* 1. Находим конкретные блоки с текстом и красим их */
+#header h1, #header p, 
+#main section h2, #main section p, #main section li,
+#footer p, #footer .copyright {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* 2. Делаем акценты (90% в сеть) неоновыми */
+#main b, #main strong {
+    color: #00ffcc !important;
+    -webkit-text-fill-color: #00ffcc !important;
+    font-weight: bold;
+}
+
+/* 3. Кнопка - теперь она точно будет бирюзовой */
+#wrapper .button.primary {
+    background-color: #00ffcc !important;
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.4) !important;
+}
+
+/* 4. Заголовки делаем жирнее */
+h1, h2, h3 {
+    font-weight: 800 !important;
+}
+
 
 
 
