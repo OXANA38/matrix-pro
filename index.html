@@ -6,6 +6,40 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+    /* 1. Нацеливаемся на контентные блоки, а не на весь экран */
+    .content, .spotlight .content, .main > .major {
+        color: #ffffff !important;
+    }
+
+    /* 2. Принудительно красим текст внутри параграфов */
+    #wrapper p, #wrapper li, #wrapper h1, #wrapper h2, #wrapper h3 {
+        color: #ffffff !important;
+        opacity: 1 !important;
+        visibility: visible !important; /* На случай, если скрипт скрыл текст */
+    }
+
+    /* 3. Выделяем жирный текст неоном (твои 90%) */
+    #wrapper b, #wrapper strong {
+        color: #00ffcc !important;
+    }
+
+    /* 4. Кнопки: зеленый неон с черным текстом для читаемости */
+    #wrapper .button.primary {
+        background-color: #00ffcc !important;
+        color: #1f1f1f !important;
+        box-shadow: none !important;
+    }
+
+    /* 5. Убираем эффект "затухания", который может баговать */
+    body.is-preload * {
+        -moz-transition: none !important;
+        -webkit-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+    }
+</style>
 	</head>
 	<body class="is-preload">
 
@@ -111,6 +145,7 @@
 
 	</body>
 </html>
+
 
 
 
