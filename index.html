@@ -124,6 +124,17 @@ body b, body strong,
     color: #006633 !important; /* Темный зеленый для белого фона */
     text-shadow: none !important;
 }
+
+			/* ИСПРАВЛЕНИЕ ЦВЕТА АКЦЕНТОВ В БЕЛЫХ БЛОКАХ - ПРИОРИТЕТНОЕ */
+.box * strong, .box b,
+.features li * strong, .features li b,
+[style*="rgba(255"] strong, [style*="rgba(255"] b,
+[style*="#fff"] strong, [style*="#fff"] b,
+[style*="white"] strong, [style*="white"] b {
+    color: #006633 !important;
+    text-shadow: none !important;
+    font-weight: 700 !important;
+}
 </style>
 	</head>
 	<body class="is-preload">
@@ -355,6 +366,7 @@ body b, body strong,
 
 	</body>
 </html>
+
 
 
 
