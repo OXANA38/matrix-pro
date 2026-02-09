@@ -207,6 +207,35 @@ a[href="#cases"] {
     position: relative;
     z-index: 5;
 }
+
+			/* ИСПРАВЛЕНИЕ ЦВЕТА АКЦЕНТОВ В НОВЫХ БЕЛЫХ БЛОКАХ */
+
+/* Для секции #details */
+#details .box b, #details .box strong,
+#details [style*="rgba(255"] b, #details [style*="rgba(255"] strong {
+    color: #006633 !important;
+    text-shadow: none !important;
+    font-weight: 700 !important;
+}
+
+/* Для секции #cases */
+#cases .box b, #cases .box strong,
+#cases [style*="rgba(255"] b, #cases [style*="rgba(255"] strong {
+    color: #006633 !important;
+    text-shadow: none !important;
+    font-weight: 700 !important;
+}
+
+/* Универсальное правило для ВСЕХ белых блоков на странице */
+.box b, .box strong,
+[style*="background: rgba(255,255,255"] b, 
+[style*="background: rgba(255,255,255"] strong,
+[style*="background: rgba(255, 255, 255"] b,
+[style*="background: rgba(255, 255, 255"] strong {
+    color: #006633 !important;
+    text-shadow: none !important;
+    font-weight: 700 !important;
+}
 </style>
 	</head>
 	<body class="is-preload">
@@ -532,6 +561,7 @@ a[href="#cases"] {
 
 	</body>
 </html>
+
 
 
 
