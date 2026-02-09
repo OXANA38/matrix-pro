@@ -7,37 +7,37 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-    /* 1. Нацеливаемся на контентные блоки, а не на весь экран */
-    .content, .spotlight .content, .main > .major {
-        color: #ffffff !important;
+    /* 1. ГЛАВНОЕ: ДЕЛАЕМ ФОН ТЕМНЫМ И ГЛУБОКИМ */
+    html, body, #wrapper {
+        background-color: #1b1b2f !important; /* Темно-синий/черный космос */
+        background-image: linear-gradient(to bottom right, #2d1b4e, #000000) !important; /* Градиент как в исходнике, но темнее */
+        background-attachment: fixed !important;
     }
 
-    /* 2. Принудительно красим текст внутри параграфов */
-    #wrapper p, #wrapper li, #wrapper h1, #wrapper h2, #wrapper h3 {
-        color: #ffffff !important;
+    /* 2. Убираем возможные белые "подложки" у текстовых блоков */
+    .main, .spotlight, .content, .box {
+        background: transparent !important; /* Прозрачный фон у блоков */
+        background-color: rgba(0, 0, 0, 0.2) !important; /* Или легкая тонировка */
+    }
+
+    /* 3. Текст теперь будет сиять */
+    h1, h2, h3, h4, p, li, span, a {
+        color: #ffffff !important; /* Чисто белый текст */
         opacity: 1 !important;
-        visibility: visible !important; /* На случай, если скрипт скрыл текст */
+        text-shadow: 0 2px 5px rgba(0,0,0,0.5); /* Тень, чтобы буквы не сливались */
     }
 
-    /* 3. Выделяем жирный текст неоном (твои 90%) */
-    #wrapper b, #wrapper strong {
-        color: #00ffcc !important;
+    /* 4. Твои акценты (90% и т.д.) */
+    b, strong {
+        color: #00ffcc !important; /* Неон */
     }
 
-    /* 4. Кнопки: зеленый неон с черным текстом для читаемости */
-    #wrapper .button.primary {
+    /* 5. Кнопка */
+    .button.primary {
         background-color: #00ffcc !important;
-        color: #1f1f1f !important;
-        box-shadow: none !important;
-    }
-
-    /* 5. Убираем эффект "затухания", который может баговать */
-    body.is-preload * {
-        -moz-transition: none !important;
-        -webkit-transition: none !important;
-        -ms-transition: none !important;
-        transition: none !important;
-        opacity: 1 !important;
+        color: #1a1a1a !important; /* Темный текст на кнопке */
+        box-shadow: 0 0 20px rgba(0, 255, 204, 0.4) !important;
+        border: none !important;
     }
 </style>
 	</head>
@@ -145,6 +145,7 @@
 
 	</body>
 </html>
+
 
 
 
