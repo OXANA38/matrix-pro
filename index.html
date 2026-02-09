@@ -35,9 +35,16 @@ p, li, span, .content, .features li p, .copyright {
 
 /* 4. АКЦЕНТНЫЕ ЦВЕТА (цифры, акценты) - ЯРКИЙ НЕОНОВЫЙ ДЛЯ СИНЕ-ЗЕЛЕНОГО ФОНА */
 b, strong {
-    color: #00ff88 !important; /* Яркий неоновый зеленый */
+    color: #00cc66 !important; /* Более насыщенный и темный зеленый для лучшего контраста */
     font-weight: 700 !important;
-    text-shadow: 0 0 12px rgba(0, 255, 136, 0.7) !important; /* Легкое неоновое свечение */
+    text-shadow: none !important; /* УБИРАЕМ размытие */
+    position: relative;
+    display: inline-block;
+}
+
+/* Альтернатива: тонкая темная обводка для читаемости (опционально) */
+b, strong {
+    /* text-shadow: 0 0 1px #000, 0 0 1px #000, 0 0 1px #000 !important; */
 }
 
 /* 5. НАВИГАЦИЯ - делаем контрастной */
@@ -334,6 +341,7 @@ b, strong {
 
 	</body>
 </html>
+
 
 
 
