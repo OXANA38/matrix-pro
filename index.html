@@ -178,6 +178,21 @@ body b, body strong,
 #second div:not(#header):not(#nav):not(#footer):not(.spotlight) strong {
     color: #006633 !important;
 }
+
+			/* Плавный скролл для всех якорных ссылок */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Подсветка активного раздела при скролле */
+#cases:target {
+    animation: highlight 2s ease;
+}
+
+@keyframes highlight {
+    0% { background-color: rgba(0, 255, 136, 0.1); }
+    100% { background-color: transparent; }
+}
 </style>
 	</head>
 	<body class="is-preload">
@@ -194,13 +209,15 @@ body b, body strong,
 			</header>
 
 			<nav id="nav">
-				<ul>
-					<li><a href="#intro" class="active">Главная</a></li>
-					<li><a href="#first">Преимущества</a></li>
-					<li><a href="#second">Окупаемость</a></li>
-					<li><a href="#cta">Старт</a></li>
-				</ul>
-			</nav>
+    <ul>
+        <li><a href="#intro" class="active">Главная</a></li>
+        <li><a href="#first">Преимущества</a></li>
+        <li><a href="#second">Окупаемость</a></li>
+        <li><a href="#details">Алгоритм</a></li>
+        <li><a href="#cases">Кейсы</a></li> <!-- Вот эта строка должна быть -->
+        <li><a href="#cta">Старт</a></li>
+    </ul>
+</nav>
 
 			<div id="main">
 
@@ -409,6 +426,7 @@ body b, body strong,
 
 	</body>
 </html>
+
 
 
 
