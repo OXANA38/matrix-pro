@@ -6,6 +6,108 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+/* 1. ОСНОВНОЙ ФОН СРАЗУ ДЕЛАЕМ ЦВЕТНЫМ ГРАДИЕНТОМ */
+html, body, #wrapper {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important; /* Красивый фиолетово-синий */
+    background-attachment: fixed !important;
+    color: #000000 !important; /* Основной цвет текста - черный */
+}
+
+/* 2. УБИРАЕМ ВСЕ БЕЛЫЕ ФОНЫ И ДЕЛАЕМ БЛОКИ ПРОЗРАЧНЫМИ */
+#header, #nav, #main, #footer {
+    background-color: transparent !important;
+}
+
+/* 3. ДЕЛАЕМ ТЕКСТ ЯРКИМ И ЧЕТКИМ */
+h1, h2, h3, h4, h5, h6 {
+    color: #111111 !important; /* Почти черный */
+    text-shadow: none !important; /* Убираем тени, мешающие читаемости */
+    font-weight: 700 !important; /* Жирнее */
+}
+
+p, li, span, .content, .features li p, .copyright {
+    color: #222222 !important; /* Темно-серый (почти черный) */
+    opacity: 1 !important; /* Убираем полупрозрачность */
+    text-shadow: none !important;
+    font-weight: 400 !important;
+}
+
+/* 4. АКЦЕНТНЫЕ ЦВЕТА (цифры, акценты) */
+b, strong {
+    color: #d400ff !important; /* Яркий фиолетовый */
+    font-weight: 700 !important;
+}
+
+/* 5. НАВИГАЦИЯ - делаем контрастной */
+#nav {
+    background-color: rgba(255, 255, 255, 0.9) !important; /* Белый с прозрачностью */
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+#nav ul li a {
+    color: #333333 !important; /* Темно-серый текст */
+    font-weight: 600 !important;
+}
+
+#nav ul li a.active, #nav ul li a:hover {
+    background-color: #667eea !important; /* Цвет фона градиента */
+    color: white !important;
+    border-radius: 8px !important;
+}
+
+/* 6. КАРТОЧКИ ПРЕИМУЩЕСТВ */
+.features li {
+    background: rgba(255, 255, 255, 0.85) !important; /* Белый с легкой прозрачностью */
+    border: none !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1) !important;
+    padding: 2em !important;
+    transition: transform 0.3s ease !important;
+}
+
+.features li:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* 7. КНОПКИ */
+.button.primary {
+    background: linear-gradient(90deg, #ff0080, #ff8c00) !important; /* Яркий розово-оранжевый */
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 5px 20px rgba(255, 0, 128, 0.4) !important;
+    font-weight: 700 !important;
+}
+
+.button:not(.primary) {
+    background: transparent !important;
+    border: 2px solid #667eea !important;
+    color: #667eea !important;
+    font-weight: 600 !important;
+}
+
+.button:not(.primary):hover {
+    background: rgba(102, 126, 234, 0.1) !important;
+}
+
+/* 8. РАЗДЕЛИТЕЛЬНЫЕ ЛИНИИ */
+.main > .main {
+    border-top: 1px solid rgba(255, 255, 255, 0.3) !important; /* Белая прозрачная линия */
+}
+
+/* 9. ИКОНКИ - делаем цветными */
+.icon.major {
+    color: #667eea !important;
+    border-color: #667eea !important;
+}
+
+.icon.major:before {
+    border-color: #667eea !important;
+}
+</style>
 	</head>
 	<body class="is-preload">
 
@@ -111,6 +213,7 @@
 
 	</body>
 </html>
+
 
 
 
