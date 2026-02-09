@@ -3784,5 +3784,48 @@ input, select, textarea {
 			}
 
 		}
+/* ЧЕТКИЙ ТЕКСТ И ЯРКИЕ АКЦЕНТЫ */
+
+/* 1. Убираем прозрачность у всего текста */
+body, p, b, strong, li, dt, dd {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* 2. Делаем заголовки максимально белыми и жирными */
+h1, h2, h3, h4, .major h2 {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.5px;
+}
+
+/* 3. Выделяем важные цифры (90% в сеть и т.д.) неоном */
+b, strong {
+    color: #00ffcc !important; 
+    font-weight: 700;
+}
+
+/* 4. Кнопка "Запустить бота" — делаем её сочной и заметной */
+.button.primary {
+    background-color: #00ffcc !important; /* Неоновый бирюзовый */
+    color: #000000 !important; /* Черный текст для идеального контраста */
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.4) !important;
+    font-weight: 800 !important;
+}
+
+.button.primary:hover {
+    background-color: #ffffff !important;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* 5. Навигация в меню */
+#nav ul li a {
+    color: #ffffff !important;
+}
+#nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #00ffcc !important;
+}
+
 
 
