@@ -33,13 +33,6 @@ p, li, span, .content, .features li p, .copyright {
     font-weight: 400 !important;
 }
 
-/* 4. АКЦЕНТНЫЕ ЦВЕТА (цифры, акценты) - ЯРКИЙ ЖЕЛТЫЙ */
-b, strong {
-    color: #ffff00 !important; /* Яркий желтый - классический контраст синему */
-    font-weight: 700 !important;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
-}
-
 /* 5. НАВИГАЦИЯ - делаем контрастной */
 #nav {
     background-color: rgba(255, 255, 255, 0.9) !important; /* Белый с прозрачностью */
@@ -107,6 +100,29 @@ b, strong {
 
 .icon.major:before {
     border-color: #667eea !important;
+}
+
+			/* 4. УМНЫЕ АКЦЕНТЫ: разный цвет для разного фона */
+
+/* 4.1. ЖЕЛТЫЙ акцент для синего фона (основная страница) */
+body b, body strong,
+#wrapper b, #wrapper strong,
+#header b, #header strong,
+#footer b, #footer strong {
+    color: #ffff00 !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 4.2. ТЕМНО-ЗЕЛЕНЫЙ акцент для белых блоков */
+.box b, .box strong,
+.features li b, .features li strong,
+[style*="background: rgba(255"] b, 
+[style*="background: rgba(255"] strong,
+[style*="background-color: rgba(255"] b,
+[style*="background-color: rgba(255"] strong {
+    color: #006633 !important; /* Темный зеленый для белого фона */
+    text-shadow: none !important;
 }
 </style>
 	</head>
@@ -339,6 +355,7 @@ b, strong {
 
 	</body>
 </html>
+
 
 
 
