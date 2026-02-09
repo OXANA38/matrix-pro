@@ -193,6 +193,20 @@ html {
     0% { background-color: rgba(0, 255, 136, 0.1); }
     100% { background-color: transparent; }
 }
+
+			/* Исправление кликабельности кнопки Кейсы */
+a[href="#cases"] {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 10;
+}
+
+/* Убираем возможные перекрытия для кнопок */
+.actions.special {
+    position: relative;
+    z-index: 5;
+}
 </style>
 	</head>
 	<body class="is-preload">
@@ -307,20 +321,6 @@ html {
 					</div>
 				</section>
 				<!-- КОНЕЦ БЛОКА О РИСКАХ -->
-
-				/* Исправление кликабельности кнопки Кейсы */
-a[href="#cases"] {
-    cursor: pointer !important;
-    pointer-events: auto !important;
-    position: relative;
-    z-index: 10;
-}
-
-/* Убираем возможные перекрытия для кнопок */
-.actions.special {
-    position: relative;
-    z-index: 5;
-}
 
 				<!-- СЕКЦИЯ: ДЕТАЛИ АЛГОРИТМА -->
 <section id="details" class="main special">
@@ -532,6 +532,7 @@ a[href="#cases"] {
 
 	</body>
 </html>
+
 
 
 
