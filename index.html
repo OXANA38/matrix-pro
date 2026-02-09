@@ -33,6 +33,31 @@ p, li, span, .content, .features li p, .copyright {
     font-weight: 400 !important;
 }
 
+			/* 4. БАЗОВОЕ ПРАВИЛО - желтый для всей страницы */
+b, strong {
+    color: #ffff00 !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 5. ПЕРЕОПРЕДЕЛЕНИЕ для конкретных белых блоков - БОЛЕЕ СПЕЦИФИЧНОЕ */
+section#first .features li b,
+section#first .features li strong,
+section#second .box b,
+section#second .box strong,
+section#cta .box b,
+section#cta .box strong,
+section#risks .box b,
+section#risks .box strong,
+[style*="rgba(255"] b,
+[style*="rgba(255"] strong,
+[style*="white"] b,
+[style*="white"] strong {
+    color: #006633 !important;
+    text-shadow: none !important;
+    font-weight: 700 !important;
+}
+
 /* 5. НАВИГАЦИЯ - делаем контрастной */
 #nav {
     background-color: rgba(255, 255, 255, 0.9) !important; /* Белый с прозрачностью */
@@ -366,6 +391,7 @@ body b, body strong,
 
 	</body>
 </html>
+
 
 
 
