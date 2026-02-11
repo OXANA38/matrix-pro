@@ -1,1 +1,586 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Magic Lime — Твой старт в бизнесе, где 90% дохода идёт тебе</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 1. ЯРКИЙ, ЭМОЦИОНАЛЬНЫЙ ФОН - градиент успеха */
+        html, body, #wrapper {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333 !important;
+        }
+
+        /* 2. ШАПКА - ВИЗУАЛЬНЫЙ УДАР */
+        #header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80') center/cover no-repeat !important;
+            color: white !important;
+            padding: 6em 0 4em !important;
+            text-align: center;
+        }
+
+        #header h1 {
+            font-size: 3.5em;
+            color: white !important;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            margin-bottom: 0.5em;
+        }
+
+        #header p {
+            font-size: 1.5em;
+            color: #fff !important;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto 1.5em;
+        }
+
+        /* 3. БЛОК С ЦИФРАМИ - сразу бьем цифрами */
+        .stats-bar {
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: white;
+            padding: 2em;
+            border-radius: 15px;
+            margin: 2em auto;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            box-shadow: 0 10px 30px rgba(0, 114, 255, 0.3);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1em;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: 800;
+            display: block;
+            color: #ffff00;
+        }
+
+        .stat-text {
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        /* 4. КАРТОЧКИ ПРЕИМУЩЕСТВ - красивые и понятные */
+        .benefit-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2em;
+            margin: 1.5em;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            border-top: 5px solid #00c6ff;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .benefit-icon {
+            font-size: 3em;
+            color: #0072ff;
+            margin-bottom: 0.5em;
+        }
+
+        /* 5. БЛОК "ЖИЗНЬ НА ПРОДАЖАХ" - эмоции через фото */
+        .lifestyle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 3em 0;
+        }
+
+        .lifestyle-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .lifestyle-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .lifestyle-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .lifestyle-text {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            width: 100%;
+            padding: 1em;
+            font-weight: 600;
+        }
+
+        /* 6. КЕЙСЫ ЗАРАБОТКА - конкретные истории */
+        .case-study {
+            background: white;
+            border-radius: 15px;
+            padding: 2em;
+            margin: 2em 0;
+            border-left: 5px solid #00ff88;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .case-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #0072ff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            float: left;
+            margin-right: 1em;
+        }
+
+        .income-badge {
+            background: linear-gradient(90deg, #00ff88, #00cc66);
+            color: white;
+            padding: 0.5em 1em;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 0.5em 0;
+        }
+
+        /* 7. КНОПКИ - призывы к действию */
+        .cta-button {
+            background: linear-gradient(90deg, #FF512F, #F09819);
+            color: white !important;
+            padding: 1em 2em;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 700;
+            border: none;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(255,81,47,0.4);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,81,47,0.6);
+            color: white;
+        }
+
+        .cta-button.secondary {
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+        }
+
+        /* 8. СИСТЕМА КЛОНОВ - простое объяснение */
+        .clone-system {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3em;
+            border-radius: 20px;
+            margin: 3em 0;
+        }
+
+        .clone-card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2em;
+            margin: 1em;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* 9. ПРОЗРАЧНОСТЬ БИЗНЕСА */
+        .transparency-box {
+            background: white;
+            border-radius: 15px;
+            padding: 2em;
+            margin: 2em 0;
+            border: 2px solid #00ff88;
+        }
+
+        .money-flow {
+            font-size: 2em;
+            font-weight: 800;
+            color: #00cc66;
+            text-align: center;
+            margin: 0.5em 0;
+        }
+
+        /* 10. НАВИГАЦИЯ - простая */
+        #nav {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 0 0 15px 15px;
+        }
+
+        #nav ul li a {
+            font-weight: 600;
+            color: #333 !important;
+        }
+
+        /* 11. ФУТЕР */
+        #footer {
+            background: #1a1a1a;
+            color: white !important;
+            padding: 3em 0;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin: 1em 0;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5em;
+            margin: 0 0.5em;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00c6ff;
+        }
+
+        /* АДАПТИВНОСТЬ */
+        @media (max-width: 768px) {
+            #header h1 {
+                font-size: 2.5em;
+            }
+            
+            .stats-bar {
+                flex-direction: column;
+            }
+            
+            .lifestyle-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <div id="wrapper">
+
+        <!-- ШАПКА С ГЛАВНЫМ ПРИЗЫВОМ -->
+        <header id="header" class="alt">
+            <h1>Зарабатывай от 150,000 ₽ в месяц, помогая людям учиться</h1>
+            <p><strong>Magic Lime — партнёрская программа №1 в образовании.</strong><br>90% от каждой продажи идёт в маркетинг — тебе и твоей команде.</p>
+            
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">90%</span>
+                    <span class="stat-text">дохода идёт партнёрам</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">150К+</span>
+                    <span class="stat-text">средний доход в месяц</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-text">автоматические выплаты</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">7 дней</span>
+                    <span class="stat-text">старт с нуля до первых денег</span>
+                </div>
+            </div>
+
+            <a href="#start" class="cta-button">НАЧАТЬ ЗАРАБАТЫВАТЬ →</a>
+        </header>
+
+        <!-- НАВИГАЦИЯ -->
+        <nav id="nav">
+            <ul>
+                <li><a href="#money" class="active"><i class="fas fa-money-bill-wave"></i> Доход</a></li>
+                <li><a href="#lifestyle"><i class="fas fa-home"></i> Жизнь</a></li>
+                <li><a href="#cases"><i class="fas fa-chart-line"></i> Кейсы</a></li>
+                <li><a href="#clones"><i class="fas fa-robot"></i> Автомат</a></li>
+                <li><a href="#start"><i class="fas fa-rocket"></i> Старт</a></li>
+            </ul>
+        </nav>
+
+        <div id="main">
+
+            <!-- РАЗДЕЛ 1: СКОЛЬКО МОЖНО ЗАРАБОТАТЬ -->
+            <section id="money" class="main">
+                <div class="spotlight">
+                    <div class="content">
+                        <header class="major">
+                            <h2>Почему здесь такие большие деньги?</h2>
+                            <p>Потому что мы отдаём партнёрам почти всё</p>
+                        </header>
+                        
+                        <div class="transparency-box">
+                            <h3><i class="fas fa-chart-pie"></i> Распределение денег с каждой продажи:</h3>
+                            <div class="money-flow">10,000 ₽ ← твоя продажа</div>
+                            <div style="text-align: center; margin: 1em 0;">
+                                <div style="display: inline-block; text-align: left;">
+                                    <p><strong>✅ 9,000 ₽ (90%)</strong> — уходит в маркетинг:<br>
+                                    &nbsp;&nbsp;• <strong>4,500 ₽</strong> — тебе (партнёрская комиссия)<br>
+                                    &nbsp;&nbsp;• <strong>3,000 ₽</strong> — твоим наставникам<br>
+                                    &nbsp;&nbsp;• <strong>1,500 ₽</strong> — на автоматизацию и бонусы</p>
+                                    
+                                    <p><strong>⚠️ 1,000 ₽ (10%)</strong> — на поддержку платформы</p>
+                                </div>
+                            </div>
+                            <p style="text-align: center; font-weight: bold; color: #0072ff;">Ты получаешь 45% с каждой продажи + доход с команды!</p>
+                        </div>
+                        
+                        <h3>Три способа зарабатывать в Magic Lime:</h3>
+                        
+                        <div class="row aln-center" style="margin-top: 2em;">
+                            <div class="col-4 col-12-medium">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon"><i class="fas fa-user-plus"></i></div>
+                                    <h4>1. Прямые продажи</h4>
+                                    <p>Приводи клиентов на курсы — получай <strong>45%</strong> от стоимости сразу на карту. Продал курс за 20,000 ₽ → получил 9,000 ₽ чистыми.</p>
+                                </div>
+                            </div>
+                            <div class="col-4 col-12-medium">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon"><i class="fas fa-users"></i></div>
+                                    <h4>2. Командный доход</h4>
+                                    <p>Собирай команду — получай процент с их продаж. Всего 5 активных партнёров в команде = <strong>+50,000 ₽/мес пассивно</strong>.</p>
+                                </div>
+                            </div>
+                            <div class="col-4 col-12-medium">
+                                <div class="benefit-card">
+                                    <div class="benefit-icon"><i class="fas fa-robot"></i></div>
+                                    <h4>3. Автоматические клоны</h4>
+                                    <p>Система сама создаёт твои бизнес-места в команде. <strong>Работает 24/7</strong>, генерирует доход даже когда ты спишь.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- РАЗДЕЛ 2: ЖИЗНЬ, КОТОРУЮ ТЫ ЗАСЛУЖИВАЕШЬ -->
+            <section id="lifestyle" class="main special" style="background: #f8f9fa; padding: 4em 0;">
+                <header class="major">
+                    <h2>Жизнь, которую ты выбираешь</h2>
+                    <p>На что живут успешные партнёры Magic Lime</p>
+                </header>
+
+                <div class="lifestyle-grid">
+                    <div class="lifestyle-item">
+                        <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Автомобиль премиум-класса">
+                        <div class="lifestyle-text">Mercedes G-Class за 8 месяцев работы</div>
+                    </div>
+                    <div class="lifestyle-item">
+                        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w-800&q=80" alt="Вид на океан из виллы">
+                        <div class="lifestyle-text">Вилла в Таиланде — удалённая работа</div>
+                    </div>
+                    <div class="lifestyle-item">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Отдых на яхте">
+                        <div class="lifestyle-text">Отпуск на Мальдивах 4 раза в год</div>
+                    </div>
+                </div>
+
+                <div style="max-width: 800px; margin: 2em auto; text-align: center;">
+                    <p style="font-size: 1.3em;"><strong>"Раньше я работал менеджером за 80,000 ₽ в месяц. Сейчас мой доход — 300,000 ₽, и я управляю бизнесом с ноутбука на берегу океана."</strong></p>
+                    <p style="color: #666;">— Алексей, партнёр с 2023 года</p>
+                </div>
+            </section>
+
+            <!-- РАЗДЕЛ 3: РЕАЛЬНЫЕ КЕЙСЫ -->
+            <section id="cases" class="main special">
+                <header class="major">
+                    <h2>Обычные люди — необычные результаты</h2>
+                    <p>Истории партнёров, которые начали с нуля</p>
+                </header>
+
+                <div class="case-study">
+                    <div class="case-avatar">АК</div>
+                    <h4>Анна, 28 лет, бывший риелтор</h4>
+                    <p>"В агентстве недвижимости я зарабатывала 60,000 ₽. Решила попробовать Magic Lime как дополнительный доход. Первый месяц — 25,000 ₽. Через полгода собрала команду из 7 человек."</p>
+                    <div class="income-badge">Сейчас: 180,000 ₽/месяц</div>
+                    <p><strong>Достижение:</strong> Купила квартиру в ипотеку, платит 50% от доходов с Magic Lime.</p>
+                </div>
+
+                <div class="case-study">
+                    <div class="case-avatar">МС</div>
+                    <h4>Максим, 35 лет, бывший менеджер по продажам</h4>
+                    <p>"Устал от планов и выговоров. Вложил в обучение 15,000 ₽. За первый месяц привлёк 3 клиентов → 45,000 ₽ дохода. Запустил клонирование через 2 месяца."</p>
+                    <div class="income-badge">Сейчас: 420,000 ₽/месяц</div>
+                    <p><strong>Достижение:</strong> 4 автоматических клона работают на него, пассивный доход 120,000 ₽/месяц.</p>
+                </div>
+
+                <div class="case-study">
+                    <div class="case-avatar">ОК</div>
+                    <h4>Оксана, 41 год, в декрете</h4>
+                    <p>"Сидела дома с двумя детьми, денег не хватало. Начала вечерами после укладывания детей. Первые 3 месяца — по 30,000 ₽. Сейчас — основной доход семьи."</p>
+                    <div class="income-badge">Сейчас: 250,000 ₽/месяц</div>
+                    <p><strong>Достижение:</strong> Вывела мужа в бизнес, вместе зарабатывают 400,000 ₽/месяц.</p>
+                </div>
+            </section>
+
+            <!-- РАЗДЕЛ 4: СИСТЕМА КЛОНОВ - АВТОМАТИЧЕСКИЙ МАСШТАБ -->
+            <section id="clones" class="main special">
+                <header class="major">
+                    <h2>«Бизнес-клоны» — твои работники 24/7</h2>
+                    <p>Система сама создаёт и развивает твои бизнес-места</p>
+                </header>
+
+                <div class="clone-system">
+                    <div class="row aln-center">
+                        <div class="col-6 col-12-medium">
+                            <div class="clone-card">
+                                <h3><i class="fas fa-magic"></i> Как это работает?</h3>
+                                <p>Когда ты достигаешь определённого оборота, система <strong>автоматически создаёт твоё бизнес-место</strong> в команде новичка.</p>
+                                <ul>
+                                    <li>Клон работает как самостоятельный партнёр</li>
+                                    <li>Генерирует доход тебе (5-15% от его оборота)</li>
+                                    <li>Может создавать свои клоны</li>
+                                    <li>Работает 24/7 без твоего участия</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-6 col-12-medium">
+                            <div class="clone-card">
+                                <h3><i class="fas fa-calculator"></i> Математика клонов</h3>
+                                <p><strong>1 клон</strong> = примерно <strong>30,000 ₽/мес</strong> пассивного дохода</p>
+                                <p>У успешных партнёров через год работы:<br>
+                                5-8 клонов = <strong>150,000 - 250,000 ₽/мес</strong> чисто пассивно</p>
+                                <p style="color: #ffff00; font-weight: bold;">Это как нанять работников, которые не берут зарплату и приносят тебе деньги!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2em;">
+                    <h3>Твоя эволюция в Magic Lime:</h3>
+                    <div style="display: inline-block; text-align: left; background: white; padding: 2em; border-radius: 15px; max-width: 600px;">
+                        <p><strong>Месяц 1:</strong> 1-2 продажи → 20,000-40,000 ₽</p>
+                        <p><strong>Месяц 3:</strong> Команда 3-5 человек → 80,000-150,000 ₽</p>
+                        <p><strong>Месяц 6:</strong> 2-3 клона работают → 200,000-300,000 ₽</p>
+                        <p><strong>Год 1:</strong> 5+ клонов, команда 10+ → 400,000+ ₽</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- РАЗДЕЛ 5: СТАРТ -->
+            <section id="start" class="main special">
+                <header class="major">
+                    <h2>Начни сегодня — первые деньги через 7 дней</h2>
+                    <p>Простой путь от новичка к первым 50,000 ₽</p>
+                </header>
+
+                <div class="row aln-center" style="margin: 3em 0;">
+                    <div class="col-6 col-12-medium">
+                        <div style="background: white; border-radius: 20px; padding: 2.5em; box-shadow: 0 15px 40px rgba(0,0,0,0.1); height: 100%;">
+                            <h3><i class="fas fa-play-circle"></i> Быстрый старт</h3>
+                            <ol style="text-align: left; font-size: 1.1em;">
+                                <li><strong>Регистрация</strong> — 5 минут, бесплатно</li>
+                                <li><strong>Обучение</strong> — 2 дня, все материалы даём</li>
+                                <li><strong>Первые контакты</strong> — мы даём готовые скрипты</li>
+                                <li><strong>Первая продажа</strong> — средний чек 15,000 ₽</li>
+                                <li><strong>Первый доход</strong> — 6,750 ₽ на карту сразу</li>
+                            </ol>
+                            <p style="margin-top: 1.5em; font-weight: bold; color: #0072ff;">Мы доведём тебя до первой продажи. Обещаем.</p>
+                            
+                            <a href="https://t.me/DgagidgagiBot" class="cta-button" style="margin-top: 1.5em; display: inline-block;">
+                                <i class="fas fa-rocket"></i> НАЧАТЬ СЕЙЧАС
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-6 col-12-medium">
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 20px; padding: 2.5em; height: 100%;">
+                            <h3><i class="fas fa-crown"></i> Для амбициозных</h3>
+                            <p style="font-size: 1.2em;">Если у тебя уже есть команда или опыт в продажах:</p>
+                            <ul style="text-align: left; font-size: 1.1em;">
+                                <li>Индивидуальный план перехода</li>
+                                <li>Персональный наставник</li>
+                                <li>Ускоренный запуск клонов</li>
+                                <li>Помощь в переводе команды</li>
+                                <li>Приоритетная поддержка 24/7</li>
+                            </ul>
+                            
+                            <a href="https://t.me/Oksanasana197" class="cta-button secondary" style="margin-top: 1.5em; display: inline-block;">
+                                <i class="fas fa-handshake"></i> ОБСУДИТЬ ПЕРЕХОД КОМАНДЫ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="max-width: 800px; margin: 3em auto; padding: 2em; background: white; border-radius: 15px; border: 2px solid #00ff88;">
+                    <h3 style="text-align: center;"><i class="fas fa-shield-alt"></i> Гарантии для новичка</h3>
+                    <div class="row aln-center" style="margin-top: 1.5em;">
+                        <div class="col-4 col-12-medium">
+                            <p style="text-align: center;"><i class="fas fa-lock" style="color: #00cc66; font-size: 2em;"></i><br><strong>Возврат</strong><br>Вернём деньги за обучение, если не будет результата</p>
+                        </div>
+                        <div class="col-4 col-12-medium">
+                            <p style="text-align: center;"><i class="fas fa-hands-helping" style="color: #0072ff; font-size: 2em;"></i><br><strong>Поддержка</strong><br>Личный наставник 30 дней бесплатно</p>
+                        </div>
+                        <div class="col-4 col-12-medium">
+                            <p style="text-align: center;"><i class="fas fa-bolt" style="color: #ff9900; font-size: 2em;"></i><br><strong>Старт</strong><br>Первые деньги через 7 дней или помощь деньгами</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- ФУТЕР -->
+        <footer id="footer">
+            <section>
+                <h2>Magic Lime Academy</h2>
+                <p>Образовательная платформа №1 в СНГ<br>
+                Партнёрская программа с 2022 года<br>
+                15,000+ успешных партнёров</p>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </section>
+            <p class="copyright">&copy; Magic Lime Academy. 2024. Все расчёты основаны на реальной статистике.</p>
+            <p style="font-size: 0.9em; opacity: 0.8;">Регистрируясь, вы принимаете условия оферты</p>
+        </footer>
+
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        // Простая анимация появления при скролле
+        $(document).ready(function() {
+            $('.benefit-card, .case-study, .lifestyle-item').each(function(i) {
+                $(this).delay(i * 200).queue(function(next) {
+                    $(this).css('opacity', '0').animate({opacity: 1}, 800);
+                    next();
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
 
